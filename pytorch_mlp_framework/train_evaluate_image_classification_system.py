@@ -44,11 +44,15 @@ test_data_loader = DataLoader(test_data, batch_size=args.batch_size, shuffle=Tru
 if args.block_type == 'conv_block':
     processing_block_type = ConvolutionalProcessingBlock
     dim_reduction_block_type = ConvolutionalDimensionalityReductionBlock
+elif args.block_type == 'conv_block_bn':
+    processing_block_type = ConvolutionalProcessingBlockWithBN
+    dim_reduction_block_type = ConvolutionalDimensionalityReductionBlockWithBN
 elif args.block_type == 'empty_block':
     processing_block_type = EmptyBlock
     dim_reduction_block_type = EmptyBlock
 else:
     raise ModuleNotFoundError
+
 
 custom_conv_net = ConvolutionalNetwork(  # initialize our network object, in this case a ConvNet
     input_shape=(args.batch_size, args.image_num_channels, args.image_height, args.image_width),
