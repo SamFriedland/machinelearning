@@ -31,10 +31,7 @@ The average length for an answer to this question is approximately 1/5 of the co
 
 %% Question 2:
 \newcommand{\questionTwo} {
-\youranswer{Question 2 - Consider these results (including Figure 1 from \cite{he2016deep}). Discuss the relation between network capacity and overfitting, and whether, and how, this is reflected on these results. What other factors may have lead to this difference in performance?
-
-The average length for an answer to this question is
-approximately 1/5 of the columns in a 2-column page}
+\youranswer{The capacity of a network directly correlates to the scope of functions that a model is able to approximate, with a larger capacity allowing a network to model increasingly complex and intricate patterns in data. Increasing the capacity of a network too much, however, can lead to worse generalization [1]. The bias-variance tradeoff describes how more complex models, although they may better fit training data, i.e. have a low bias, they will generalize worse, i.e. the models estimated parameters will have a greater variance in respect to a random set of samples. Current research has sought to utilize effective regularization techniques to ensure that we can exploit the full capacity of deep models, without suffering from the overfitting which reduces a models ability to generalize [2].  }
 }
 
 %% Question 3:
